@@ -20,7 +20,7 @@ class Switch : public Toggleable {
   Switch() = delete;
   Switch(const Switch& other) = delete;
   Switch& operator=(const Switch& other) = delete;
-  Switch(void (*action_low)(), void(*action_high)(), int pin);
+  Switch(void (*action_low)(), void(*action_high)(), int pin, int pin_mode);
 
   /**
    * If the button's state has changed since the last invocation, perform the action.

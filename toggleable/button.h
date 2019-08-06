@@ -20,7 +20,7 @@ class Button : public Toggleable {
   Button() = delete;
   Button(const Button& other) = delete;
   Button& operator=(const Button& other) = delete;
-  Button(void (*action)(), int pin, int trigger_state);
+  Button(void (*action)(), int pin, int trigger_state, int pin_mode);
 
   /**
    * If the button's state has changed since the last invocation, perform the action.

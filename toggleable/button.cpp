@@ -9,8 +9,8 @@
 #include <Arduino.h>
 #include "button.h"
 
-Button::Button(void (*action)(), int pin, int trigger_state) :
-    Toggleable(pin), action_(action), trigger_state_(trigger_state) {}
+Button::Button(void (*action)(), int pin, int trigger_state, int pin_mode) :
+    Toggleable(pin, pin_mode), action_(action), trigger_state_(trigger_state) {}
 
 bool Button::TriggerIfToggled() {
   if (IsToggled() && current_state_ == trigger_state_) {

@@ -9,8 +9,8 @@
 #include <Arduino.h>
 #include "switch.h"
 
-Switch::Switch(void (*action_low)(), void(*action_high)(), int pin) :
-    Toggleable(pin), action_low_(action_low), action_high_(action_high) {}
+Switch::Switch(void (*action_low)(), void(*action_high)(), int pin, int pin_mode) :
+    Toggleable(pin, pin_mode), action_low_(action_low), action_high_(action_high) {}
 
 bool Switch::TriggerIfToggled() {
   if (IsToggled()) {

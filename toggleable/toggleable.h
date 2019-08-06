@@ -18,7 +18,7 @@ class Toggleable {
   Toggleable() = delete;
   Toggleable(const Toggleable& other) = delete;
   Toggleable& operator=(const Toggleable& other) = delete;
-  Toggleable(int pin);
+  Toggleable(int pin, int pin_mode);
 
   /**
    * Perform some action when the state is toggled.

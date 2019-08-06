@@ -9,8 +9,8 @@
 #include <Arduino.h>
 #include "toggleable.h"
 
-Toggleable::Toggleable(int pin) : pin_(pin) {
-  pinMode(pin, INPUT);
+Toggleable::Toggleable(int pin, int pin_mode) : pin_(pin) {
+  pinMode(pin, pin_mode);
   current_state_ = digitalRead(pin);
 }
 
